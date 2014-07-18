@@ -7,7 +7,7 @@ Sortable-array.js offers advanced sorting method on javascript object's array.
 
 Just copy the sortable-array.js file into your project folder, and add this line into your html file:
 
-`<script type='text/javascript' src='test.js'></script>`
+`<script type='text/javascript' src='sortable-array.js'></script>`
 
 If you use bower, you can get it this way:
 
