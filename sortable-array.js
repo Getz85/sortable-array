@@ -26,14 +26,20 @@ var SORT_MODE = Object.freeze({
 var SortableArray = (function () {
 
     // Ignore warning: not an array instanciation but a copy of Array prototype into SortableArray's
-    SortableArray.prototype = new Array();
+	SortableArray.prototype = new Array();
 
-    /**
+ /**
      * Construct a sortable array
      * @constructor
+	 * @param {Array=} 
      */
-    function SortableArray() {}
-
+    function SortableArray(array){
+		if(typeof array !== 'undefined'){
+			if(array instanceof Array){
+				this.push.apply(this, array);
+			}
+		}
+	}
 
     /**
      * Private function used by the array.sort function to easily

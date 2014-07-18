@@ -138,6 +138,25 @@ describe("SortableArray test", function() {
 		expect(myArray.length).toBe(0);
 	  });
 	  
+	  it("construct sortable array from antoher array", function(){
+		var sortable = new SortableArray(myArray);
+		expect(sortable.length).toBe(myArray.length);
+		sortable.sortByProperties('value', SORT_MODE.INT, true);
+		expect(sortable[0]["value"]).toBe(1);
+		expect(sortable[1]["value"]).toBe(2);
+		expect(sortable[2]["value"]).toBe(3);
+	  });
+	  
+	  it("sort on simple array", function(){
+		var sortable = new SortableArray([9,4,7,3]);
+		console.log(sortable);
+		sortable.sort();
+		expect(sortable[0]).toBe(3);
+		expect(sortable[1]).toBe(4);
+		expect(sortable[2]).toBe(7);
+		expect(sortable[3]).toBe(9);
+	  });
+	  
 });
 
 describe("RemoveDiacritics function test", function() {
