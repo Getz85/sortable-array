@@ -1,0 +1,27 @@
+{
+  "name": "sortable-array",
+  "main": "sortable-array.js",
+  "version": "1.0.0",
+  "authors": [
+    "Getz85"
+  ],
+  "description": "Sort array of object by their properties",
+  "keywords": [
+    "javascript",
+    "sort",
+    "properties",
+    "object"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Getz85/sortable-array",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "devDependencies": {
+    "jasmine": "~2.0.0"
+  }
+}
