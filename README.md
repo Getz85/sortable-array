@@ -94,3 +94,11 @@ SortableArray is only compatible with browsers supporting EcmaScript 5.
 * **Safari 5.1+**
 * **Opera 12+**
 
+###Contribute
+
+I welcome and encourage community contributions!
+The only requirement for pull requests: Unit tests must succeed. Don't create a pull request without testing it.
+If you add a new feature, please provide some tests case in the file test/test.js.
+
+Unit tests are based on [Jasmine 2.0](http://jasmine.github.io/2.0/introduction.html)
+
