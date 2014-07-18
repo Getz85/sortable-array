@@ -124,9 +124,7 @@ describe("SortableArray test", function() {
 		"value": 2,
 		"filename": "Fourth file",
 		});
-		console.log(JSON.stringify(myArray));
 		myArray.sortByProperties('filename', SORT_MODE.FILE_EXTENSION, false);
-		console.log(JSON.stringify(myArray));
 		expect(myArray[0]["value"]).toBe(2);
 		expect(myArray[1]["value"]).toBe(1);
 		expect(myArray[2]["value"]).toBe(3);
