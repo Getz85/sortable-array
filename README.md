@@ -83,9 +83,25 @@ As SortableArray is derivated from the Array prototype, you can use the Array.so
 var sortable = new SortableArray([9,4,7,3]);
 sortable.sort();
 ```
-`console.log(sortable)` wille give you `[3,4,7,9]`
+`console.log(sortable)` will give you `[3,4,7,9]`
 
-###Compatibility
+###Remove By Properties
+Remove an element from the array by his property name
+```
+var sortableArray = new SortableArray();
+sortableArray.push({
+	"name": "Second value",
+	"value": 2,
+});
+sortableArray.unshift({
+	"name": "First value",
+	 "value": 1,
+});
+sortable.removeByProperties("name", "First value");
+```
+`console.log(sortable)` will give you `[{"name": "Second value","value": 2,}]`
+
+##Compatibility
 
 SortableArray is only compatible with browsers supporting EcmaScript 5.
 * **IE 9+**
@@ -94,7 +110,7 @@ SortableArray is only compatible with browsers supporting EcmaScript 5.
 * **Safari 5.1+**
 * **Opera 12+**
 
-###Contribute
+##Contribute
 
 I welcome and encourage community contributions!
 The only requirement for pull requests: Unit tests must succeed. Don't create a pull request without testing it.
