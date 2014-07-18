@@ -9,6 +9,18 @@ Just copy the sortable-array.js file into your project folder, and add this line
 
 `<script type='text/javascript' src='test.js'></script>`
 
+If you use bower, you can get it this way:
+
+`bower install sortable-array`
+
+or add this dependency into your bower.json:
+
+```
+"dependencies":{
+	"sortable-array": "latest"
+  }
+```
+
 ##How to use it
 
 ###Instantiation
