@@ -29,7 +29,7 @@ var simpleArray = [{
 var sortableArray = new SortableArray(simpleArray);
 ```
 
-You can instantiate it with no value, and push, shift, pop, unshift values.
+Or you can instantiate it empty, and push, shift, pop, unshift values.
 ```
 var sortableArray = new SortableArray();
 sortableArray.push({
@@ -64,13 +64,21 @@ sortable.sortByProperties('value', SORT_MODE.INT, true);
 * SORT_MODE.FILE_EXTENSION
 
 
-
 ###Sort simple array
 
-As SortableArray is derivated from the Array prototype, you can use the Array.sort function to sort a simple array of primitive types (int, string).
+As SortableArray is derivated from the Array prototype, you can use the Array.sort function (and all the others function of Array) to sort a simple array of primitive types (int, string).
 ```
 var sortable = new SortableArray([9,4,7,3]);
 sortable.sort();
 ```
 `console.log(sortable)` wille give you `[3,4,7,9]`
+
+###Compatibility
+
+SortableArray is only compatible with browsers supporting EcmaScript 5.
+* **IE 9+**
+* **Chrome 13+**
+* **Firefox 4+**
+* **Safari 5.1+**
+* **Opera 12+**
 
