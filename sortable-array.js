@@ -81,8 +81,12 @@ var SortableArray = (function () {
                 this.sort(sort_by(name, asc, function (a) {
 					if(typeof a === "undefined") return "";
                     var parts = a.toLowerCase().split(".");
-                    a = parts[(parts.length - 1)];
-                    return a.removeDiacritics().toUpperCase()
+					if(parts.length > 1){
+						a = parts[(parts.length - 1)];
+						return a.removeDiacritics().toUpperCase();
+					}else{
+						return "";
+					}
                 }));
                 break;
             case SORT_MODE.STRING:

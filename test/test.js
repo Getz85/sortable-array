@@ -118,6 +118,20 @@ describe("SortableArray test", function() {
 		expect(myArray[2]["value"]).toBe(3);
 	  });  
 	  
+	  it("sort by file extension with no extension", function() {
+		myArray.push({
+		"name": "Fourth value",
+		"value": 2,
+		"filename": "Fourth file",
+		});
+		console.log(JSON.stringify(myArray));
+		myArray.sortByProperties('filename', SORT_MODE.FILE_EXTENSION, false);
+		console.log(JSON.stringify(myArray));
+		expect(myArray[0]["value"]).toBe(2);
+		expect(myArray[1]["value"]).toBe(1);
+		expect(myArray[2]["value"]).toBe(3);
+	  });  
+	  
 	  it("clear", function(){
 		expect(myArray.length).toBe(3);
 		myArray.clear();
@@ -149,7 +163,6 @@ describe("SortableArray test", function() {
 	  
 	  it("sort on simple array", function(){
 		var sortable = new SortableArray([9,4,7,3]);
-		console.log(sortable);
 		sortable.sort();
 		expect(sortable[0]).toBe(3);
 		expect(sortable[1]).toBe(4);

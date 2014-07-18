@@ -41,7 +41,7 @@ var simpleArray = [{
 var sortableArray = new SortableArray(simpleArray);
 ```
 
-Or you can instantiate it empty, and push, shift, pop, unshift values.
+Or create an empty one, and push, shift, pop or unshift values.
 ```
 var sortableArray = new SortableArray();
 sortableArray.push({
